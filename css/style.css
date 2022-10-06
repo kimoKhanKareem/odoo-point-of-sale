@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url('https://css.gg/shopping-cart.css');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  /* color: var(--first-color); */
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.clr {
+  clear: both;
+}
+
+:root {
+  --first-color: #b8b9bb;
+  --seco-colo: #ededed;
+  --red-color: #eb3d34;
+  --th-color: #ededed;
+  --grey-color: #eb3d34bd;
+  --white-color: white;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --font: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.d-nonAdjustable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-nonAdjustable {
+  display: flex;
+}
+
+.j-nonAdjustable {
+  justify-content: center;
+}
+
+.a-nonAdjustable {
+  align-items: center;
+}
+
+.s-nonAdjustable{
+  justify-content: space-between;
+}
+
+.allPadding {
+  padding: 10px;
+}
+
+/*--------------
+
+  start Style
+
+--------------*/
+/*---------
+ navbar 
+ --------*/
+.header{
+  height: 10%;
+}
+/* End  navbar  */
+
+/*----------
+
+search bar
+
+----------*/
+.search-bar{
+  height: 7%;
+}
+/* search-bar */
+
+/*----------------
+
+section bord left
+
+-----------------*/
+
+.section {
+  background-color: var(--first-color);
+  padding: 1rem;
+  margin-left: 1.5rem;
+  /* border-radius: 15px; */
+  height: 81vh;
+  overflow: scroll;
+}
+
+.section::-webkit-scrollbar {
+  display: none;
+}
+
+.section .cart-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.section .cart-section .inside-section-cart {
+  overflow: hidden;
+  background-color: var(--white-color);
+  height: 200px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.cart-section .btn .imag-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-section .btn .imag-container  .bag-btn {
+  position: absolute;
+  left: -2px;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  padding: 5px 5px 5px 20px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.imag-container .text-images {
+  position: absolute;
+  bottom: 9px;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+  transform: translateY(101%);
+  opacity: 0;
+  background-color: var(--grey-color);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.imag-container .text-images h4{
+  color: var(--white-color);
+}
+
+.section .cart-section .inside-section-cart:hover .text-images {
+  transform: translateY(10px);
+  opacity: 1;
+}
+
+/*-----------------
+
+ the page rigth up 
+ 
+ ----------------*/
+ .section-clcul{
+  border: 10px solid var(--first-color);
+  margin-left: .5rem;
+  margin-right: 1.5rem;
+
+ }
+.up{
+  overflow-y: scroll;
+    background: var(--seco-colo);
+  
+}
+.up::-webkit-scrollbarY {
+  display: none;
+}
+.up::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+/* Track */
+.up::-webkit-scrollbar-track {
+  background: var(--seco-colo);
+}
+/* Handle */
+.up::-webkit-scrollbar-thumb {
+  background: var(--red-color);
+}
+
+.box-items{
+  padding: .5rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.active{
+    background-color: var(--first-color);
+}
+
+.item-in-carts h4{
+  cursor: pointer;
+}
+
+/*-----------------
+
+ the page down 
+ 
+ ----------------*/
+ .down{
+  background: var(--white-color);
+ }
+
